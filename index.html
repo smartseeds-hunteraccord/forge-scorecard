@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Project Forge · Hunter Data Centre Accord Scorecard</title>
 <meta name="theme-color" content="#021523">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#021523;
@@ -23,7 +26,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{
-    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arimo,Arial,sans-serif;
+    font-family:Inter,Arimo,Arial,system-ui,sans-serif;
     background:var(--navy);color:var(--ice);
     line-height:1.5;font-size:16px;
   }
@@ -54,7 +57,7 @@
       linear-gradient(180deg,#0e5a45 0%, #0b3b37 45%, var(--navy) 100%);
     padding:36px 0 40px;
   }
-  .hero::after{ /* the deck's sweeping arc */
+  .hero::after{
     content:"";position:absolute;width:520px;height:520px;border-radius:50%;
     border:1.5px solid rgba(86,216,186,.35);right:-330px;top:-60px;pointer-events:none;
   }
@@ -156,7 +159,7 @@
   .arrow{width:2px;height:22px;background:var(--ice);opacity:.55;position:relative}
   .arrow::after{content:"";position:absolute;left:-4px;bottom:-1px;border:5px solid transparent;border-top-color:var(--ice);opacity:1}
   .node.mid{width:60%}
-  .kids{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+  .kids{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%}
   .kids .node{padding:12px 8px;font-size:14px;display:flex;flex-direction:column;justify-content:center}
   .kids ul{list-style:none;font-size:12.5px;color:var(--muted);margin-top:4px}
 
@@ -204,6 +207,7 @@
   </div>
 </header>
 
+<!-- ================= HERO / SCORE ================= -->
 <div class="hero" id="score">
   <div class="wrap">
     <div class="eyebrow">Accord rating · The Hunter</div>
@@ -245,6 +249,7 @@
 
 <main class="wrap">
 
+  <!-- ================= CRITERIA ================= -->
   <section id="criteria">
     <h2 class="reveal">The five criteria</h2>
     <p class="lede reveal">Every Accord project is rated Bronze, Silver or Gold on five criteria. Tap a criterion to see what Forge committed to and what Gold would take.</p>
@@ -258,6 +263,7 @@
     </div>
   </section>
 
+  <!-- ================= FRAMEWORK ================= -->
   <section id="framework">
     <h2 class="reveal">The rating</h2>
     <p class="lede reveal">What each tier asks of a developer. Switch tiers to compare.</p>
@@ -270,6 +276,7 @@
     <p class="fw-note" id="fwNote"></p>
   </section>
 
+  <!-- ================= WARRANTY ================= -->
   <section id="warranty">
     <h2 class="reveal">A rating needs a warranty</h2>
     <p class="lede reveal">The Accord makes performance visible and commitments accountable. The path to certification has three steps.</p>
@@ -280,9 +287,10 @@
     </ol>
   </section>
 
+  <!-- ================= GOVERNANCE ================= -->
   <section id="governance">
     <h2 class="reveal">Who controls the Accord</h2>
-    <p class="lede reveal">The Accord sits under the state's guidelines and is run locally, with experts and the community at the table.</p>
+    <p class="lede reveal">The Accord sits under the state's guidelines and is run locally, with experts, the community and Traditional Owners at the table.</p>
     <div class="org reveal">
       <div class="node top"><b>2026 NSW DATA CENTRE GUIDELINES</b>Department of Planning, Housing and Infrastructure</div>
       <div class="arrow"></div>
@@ -291,6 +299,7 @@
       <div class="kids">
         <div class="node">Subject matter experts<ul><li>Environment</li><li>Energy</li><li>Economics</li></ul></div>
         <div class="node">Community</div>
+        <div class="node">Traditional Owners</div>
         <div class="node">DPHI Delegate</div>
       </div>
     </div>
@@ -314,16 +323,17 @@
     <div class="eyebrow">2035 · The future we chose</div>
     <div class="pillars">
       <div><b>Jobs</b><span>That outlast construction</span></div>
-      <div><b>Benefits</b><span>Guaranteed, not promised</span></div>
+      <div><b>Benefits</b><span>Verified, not promised</span></div>
       <div><b>Proof</b><span>The community can see</span></div>
     </div>
     <p class="cta">Write the bargain <strong>before the future arrives.</strong></p>
     <footer>
-      This is a mock scorecard prepared for the Smart Seeds Challenge B showcase. Project Forge is an illustrative project and the Hunter Data Centre Accord is a proposal, not an adopted scheme. Ratings shown are for discussion only.
+      This is a mock scorecard. Project Forge is an illustrative project and the Hunter Data Centre Accord is a proposal, not an adopted scheme. Ratings shown are for discussion only.
     </footer>
   </div>
 </div>
 
+<!-- ================= BOTTOM NAV ================= -->
 <nav class="tabs" aria-label="Sections">
   <div class="wrap">
     <a href="#score" data-sec="score"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="6"/><path d="M8 3h3l1 6M16 3h-3l-1 6"/></svg>Rating</a>
